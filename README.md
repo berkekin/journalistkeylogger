@@ -21,3 +21,26 @@ Bu kodun kullanımı ve uygulanmasıyla ilgili bazı önemli hususlar:
 Keylogger kullanımı yasal sınırlar içinde olmalıdır. Başkalarının izni olmadan keylogger kullanmak yasalara aykırı olabilir.
 Keylogger'ın kullanımı, kişisel veri gizliliğine saygı göstermeyi gerektirir. Elde edilen bilgilerin yasal ve etik olarak doğru bir şekilde kullanılması önemlidir.
 Bu kod, eğitim amaçları için sunulmuştur. Kullanılmadan önce, yerel yasalara ve etik kurallara uygun olarak adapte edilmelidir.
+
+
+EN: This code is a simple keylogger example written as a C# Console application. A keylogger is a type of software that monitors and records computer users' keyboard input. Because this type of software is a legally and ethically sensitive issue, it is important to understand the legal limits of keylogger use and respect the privacy of others.
+
+Now let's examine the main parts of the code in more detail:
+
+Namespace and Libraries: The code uses various .NET libraries such as System and System.Runtime.InteropServices. These libraries provide the functionality required to access Windows APIs and monitor keyboard events.
+
+Main Class and Startup: The main class, Program, contains the main logic of the keylogger. The main method starts the keylogger and creates a log file. It then sets up a hook to listen for keyboard events.
+
+Hook Establishment and Event Handling: The SetHook method establishes the hook required to listen to keyboard events. The HookCallback method captures every keyboard event. This method records keystrokes received from the keyboard in the log file and detects special key combinations.
+
+Special Key Combinations: The CheckSpecialKeyCombinations method checks for special key combinations. For example, combinations such as CTRL+C or CTRL+V are detected and recorded in the log file.
+
+Other Helper Methods: The code uses the GetActiveWindowTitle method to get the title of the active window.
+
+Windows API Usage: External functions are called using various DllImport attributes to access the Windows API. These functions perform tasks such as monitoring keyboard events and retrieving the title of the active window.
+
+Some important considerations regarding the use and implementation of this code:
+
+Keylogger use must be within legal limits. Using keyloggers without the permission of others may be against the law.
+The use of the keylogger requires respect for personal data privacy. It is important that the information obtained is used correctly, legally and ethically.
+This code is provided for educational purposes. Before use, it must be adapted in accordance with local laws and ethical rules.
